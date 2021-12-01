@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>How to Create responsive Homepage</title>
+    <link href="{% static 'css/firstpage1.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <img src="/static/images/photo.png" alt="" />
+        </div>
+        <ul class="nav-area">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="welcome-text">
+        <div class="card">
+          <div class="inner">
+            <div class="front">
+              <img src="/static/images/photo.png" alt="" />
+            </div>
+            <div class="back">
+              <h1 style="font-size: 10px">
+                Designers <br /><span class="design">Jashan</span><br />
+                & <br /><span class="design">Shaktanand</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="text-typing">
+          <h1>
+            nirvana<span><br />sage</span>
+          </h1>
+        </div>
+        <a href="registration">Login</a>
+      </div>
+      <div class="powered">
+        <h1>
+          PROMOTERS
+          <span><img src="/static/images/cubeblock.jfif" /> CueBlocks</span> and
+          <span><img src="/static/images/amshi.jfif" /> amshi</span>
+        </h1>
+      </div>
+    </header>
+  </body>
+</html>
