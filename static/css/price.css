@@ -129,3 +129,18 @@ h1.title {
 	background: #00FFFF;
 	color: black;
 }
+@media only screen and (max-width:1130px){
+	.pricing-table .col{
+		flex: 50% !important;
+	}
+}
+@media only screen and (max-width:750px){
+	.pricing-table .col{
+		flex: 75% !important;
+	}
+}
+@media only screen and (max-width: 520px){
+ 	.pricing-table .col{
+ 		flex:100% !important;
+ 	}
+ }
