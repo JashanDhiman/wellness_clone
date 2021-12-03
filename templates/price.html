@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="rough work.css" />
+    <link rel="stylesheet" href="{% static 'css/price.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Choose a plan</h1>
+      <div class="toggle-switch">
+        <span> Corporate Plans</span>
+        <input type="checkbox" class="toggler" />
+        <span>Individual Plans </span>
+      </div>
+      <div class="pricing-table">
+        <div class="col">
+          <div class="table">
+            <div class="price" id="first">
+              ₹100
+              <span>/ Month</span>
+            </div>
+            <ul>
+              <li>People upto <strong> 100 </strong></li>
+            </ul>
+            <a href="registration">Buy Now</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="table">
+            <div class="price" id="second">
+              ₹552
+              <span>/ Six Month</span>
+            </div>
+            <ul>
+              <li><strong>upto 100</strong></li>
+            </ul>
+            <a href="registration">Buy Now</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="table">
+            <div class="price" id="third">
+              ₹1,050
+              <span>/ Year</span>
+            </div>
+            <ul>
+              <li><strong>upto 100</strong></li>
+            </ul>
+            <a href="registration">Buy Now</a>
+          </div>
+        </div>
+        <div class="col" id="forth" style="display: none">
+          <div class="table">
+            <div class="price">
+              ₹18,800
+              <span>/ month</span>
+            </div>
+            <ul>
+              <li>upto<strong>200</strong></li>
+            </ul>
+            <a href="registration">Buy Now</a>
+          </div>
+        </div>
+        <div class="col" id="fifth" style="display: none">
+          <div class="table">
+            <div class="price">
+              ₹1,03,776
+              <span>/ six month</span>
+            </div>
+            <ul>
+              <li>upto<strong>200</strong></li>
+            </ul>
+            <a href="registration">Buy Now</a>
+          </div>
+        </div>
+        <div class="col" id="sixth" style="display: none">
+          <div class="table">
+            <div class="price">
+              ₹1,98,528
+              <span>/ Year</span>
+            </div>
+            <ul>
+              <li>upto<strong>200</strong></li>
+            </ul>
+            <a href="registration">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const toggler = document.querySelector(".toggler");
+      const first = document.getElementById("first");
+      const second = document.getElementById("second");
+      const third = document.getElementById("third");
+      const forth = document.getElementById("forth");
+
+      toggler.addEventListener("change", () => {
+        if (toggler.checked) {
+          first.innerHTML = `₹9,600 <span> / Month </span>`;
+          second.innerHTML = `₹52,992 <span> / Six Month </span>`;
+          third.innerHTML = `₹1,01,376 <span> / Year </span>`;
+          forth.style.display = "block";
+          fifth.style.display = "block";
+          sixth.style.display = "block";
+        } else {
+          first.innerHTML = `₹100 <span> / Month </span>`;
+          second.innerHTML = `₹552 <span> / Six Month </span>`;
+          third.innerHTML = `₹1,050 <span> / Year </span>`;
+          forth.style.display = "none";
+          fifth.style.display = "none";
+          sixth.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

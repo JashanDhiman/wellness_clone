@@ -4,8 +4,8 @@ def firstpage(request):
     return render(request, "firstpage.html")
 def terms(request):
     return render(request, "terms.html")
-# def price(request):
-#     return render(request, "price.html")
+def price(request):
+    return render(request, "price.html")
 # def registration(request):
 #     return render(request, "registration.html")
 # def main_input(request):
