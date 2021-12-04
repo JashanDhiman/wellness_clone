@@ -2,8 +2,6 @@ from django.shortcuts import render
 
 def firstpage(request):
     return render(request, "firstpage.html")
-def terms(request):
-    return render(request, "terms.html")
 def price(request):
     return render(request, "price.html")
 def registration(request):
