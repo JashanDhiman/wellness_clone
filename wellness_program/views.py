@@ -6,8 +6,8 @@ def terms(request):
     return render(request, "terms.html")
 def price(request):
     return render(request, "price.html")
-# def registration(request):
-#     return render(request, "registration.html")
+def registration(request):
+    return render(request, "registration.html")
 # def main_input(request):
 #     return render(request, "main_input.html")
 # def home(request):
