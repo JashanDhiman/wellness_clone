@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
+	<link rel="stylesheet" href="{% static 'css/main_input2.css' %}">	
+	<title>User Input</title>
+</head>
+<body>
+<form action="home" method="post">
+<div class="container" id="top">
+	<div class="main">
+		<div class="card" id="card">
+			{% csrf_token %}
+			<h2>USER INPUT</h2>			
+			<table>
+				<tr>
+					<td><p class="text">User Age</p></td>
+					<td><input required type="text" name="age" id="age" onkeypress="return /^-?[0-9]*$/.test(this.value+event.key)"></td>
+				</tr><tr>
+					<td></td>
+					<td><a href="#cal" id="bottom">Go To Converter</a></td>
+				</tr><tr>
+					<td><p class="text">Weight (in kg)</p></td>
+					<td><input required type="text" name="weight" id="weight"></td>
+				</tr><tr>
+					<td><p class="text">Height (in cm)</p></td>
+					<td><input required type="text" name="height" id="height" onkeypress="return /^-?[0-9]*$/.test(this.value+event.key)"></td>
+				</tr><tr>
+					<td><p class="text">Resting Heart Rate (RHR)&nbsp;<a id="img" onclick="img()"></a><span id="tooltiptext">to Calculate RHR /min. Count your heart beat for 10 seconds and multiply with 6</span></p></td>
+					<td><input required type="text" name="rhr" id="rhr" onkeypress="return /^-?[0-9]*$/.test(this.value+event.key)"></td>
+				</tr><tr>
+					<td><p class="text">Gender :-</p></td>
+					<td><input required type="radio" value="1" name="gender" id="gender1" onclick="femalehide()">
+						<label for="gender1">Male</label>
+						<input required type="radio" value="0" name="gender" id="gender2" onclick="femaleshow()">
+						<label for="gender2">Female</label></td>
+				</tr>
+			</table>
+			<div id="femalediv">
+				<input checked type="radio" value="1" name="female" id="female1">
+				<label for="female1">Normal</label>
+				<input type="radio" value="2" name="female" id="female2">
+				<label for="female2">Pregnant</label>
+				<input type="radio" value="3" name="female" id="female3">
+				<label for="female3">Lactating(0-6 Months)</label><br>
+				<input type="radio" value="4" name="female" id="female4">
+				<label for="female4">Lactating(6-12 Months)</label>
+			</div>
+			<label>
+			<p class="text">&nbsp;&nbsp;Life Style :-</p>
+			<input required type="radio" value="1" name="bodytype" id="bodytype1">
+			<label for="bodytype1">Sedantry</label>
+			<input required type="radio" value="2" name="bodytype" id="bodytype2">
+			<label for="bodytype2">Light Active</label>
+			<input required type="radio" value="3" name="bodytype" id="bodytype3">
+			<label for="bodytype3">Active</label><br>
+			<input required type="radio" value="4" name="bodytype" id="bodytype4">
+			<label for="bodytype4">Heavy</label>
+			<input required type="radio" value="5" name="bodytype" id="bodytype5">
+			<label for="bodytype5">Very Heavy</label>
+			</label><br>
+			<input type="Submit" id="btn"></input>	
+		</div>
+	</div>
+</div>
+</form>
+</body>
+</html>
