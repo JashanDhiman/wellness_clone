@@ -100,5 +100,70 @@
 	</div>
 </div>
 </form>
+<script>
+	var hinput = document.getElementById('hinput');
+	var hresult = document.getElementById('hresult');
+	var hinputType = document.getElementById('hinputType');
+	var hresultType = document.getElementById('hresultType');
+	var hinputTypeValue,hresultTypeValue;
+	hinput.addEventListener("keyup",myResult);
+	hinputType.addEventListener("change",myResult);
+	hresultType.addEventListener("change",myResult);
+	hinputTypeValue = hinputType.value;
+	hresultTypeValue = hresultType.value;
+	function myResult(){
+		hinputTypeValue = hinputType.value;
+		hresultTypeValue = hresultType.value;
+
+		if(hinputTypeValue === "inches" && hresultTypeValue==="Centimeter"){
+			hresult.value = Number(hinput.value) * 2.54;
+		}
+		else if(hinputTypeValue === "foot" && hresultTypeValue==="Centimeter"){
+			hresult.value = Number(hinput.value) * 30.48;
+		}
+	}
+	function femaleshow(){
+		var femalediv = document.getElementById("femalediv");
+		femalediv.style.visibility = "visible";
+	}
+	function femalehide(){
+		var femalediv = document.getElementById("femalediv");
+		femalediv.style.visibility = "hidden";
+	}
+
+	var winput = document.getElementById('winput');
+	var wresult = document.getElementById('wresult');
+	var winputType = document.getElementById('winputType');
+	var wresultType = document.getElementById('wresultType');
+	var winputTypeValue,wresultTypeValue;
+	winput.addEventListener("keyup",myResult1);
+	winputType.addEventListener("change",myResult1);
+	wresultType.addEventListener("change",myResult1);
+	winputTypeValue = winputType.value;
+	wresultTypeValue = wresultType.value;
+	function myResult1(){
+		winputTypeValue = winputType.value;
+		wresultTypeValue = wresultType.value;
+		if(winputTypeValue === "pounds" && wresultTypeValue==="kg"){
+			wresult.value = Number(winput.value) / 2.204;
+		}
+	}
+	function img(){
+		var span = document.getElementById("tooltiptext");
+	  	if (span.style.visibility === "visible") {
+    		span.style.visibility = "hidden";
+	  	} 
+	  	else {
+			span.style.visibility = "visible";
+	 	}
+	}
+	function keypress(evt, value) {
+    if (evt.charCode >= 48 && evt.charCode <= 57 || (value=="" && evt.charCode == 45))       
+    {  
+      return true;
+    }
+    return false;
+	}
+</script>
 </body>
 </html>
