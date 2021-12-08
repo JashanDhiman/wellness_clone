@@ -10,8 +10,8 @@ def main_input(request):
     return render(request, "main_input.html")
 def home(request):
     return render(request, "home.html")
-# def body_output(request):
-#     return render(request, "body_output.html")
+def body_output(request):
+    return render(request, "body_output.html")
 # def exercise(request):
 #     return render(request, "exercise.html")
 # def burn_output(request):
