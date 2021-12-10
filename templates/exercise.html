@@ -1,0 +1,344 @@
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link href="{% static 'css/exercise1.css' %}" rel="stylesheet">
+</head>
+<body onload="info()">
+	<form class="container" action="burn_output" method="post">
+		{% csrf_token %} 
+	<div class="navbar">
+		<p>EXERCISE</p>
+		<nav class="nav-area">
+		<button type="button" href="#sweat" onclick="showStuff('sweat','burn','intense')" id="bt"><a class="a" id="sweatbtn">sweat</a></button>
+		<button type="button" href="#burn" onclick="showStuff('burn','sweat','intense')" id="bt"><a class="a">burn</a></button>
+		<button type="button" href="#intense" onclick="showStuff('intense','sweat','burn')" id="bt"><a class="a">hiit</a></button>
+		<button type="button" href="#"  id="bt"><a class="a">Combinations</a></button>
+		</nav>
+	</div>
+	<div id="sweat">
+		<table id="sweattable">
+			<tr>
+				<th>Exercises</th><th>Duration(in minutes)</th>
+			</tr><tr>
+				<td><label>abbs-exercise</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>badminton competative</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>badminton leisure</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>basketball</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>boxing bag</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>boxing ring</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>boxing sparing</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>burpees</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>butt lifts</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>calesthenics</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>canoeing-1</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>canoeing-2</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>canoeing-3</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Circuit traning</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>cool-down</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>cricket</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>crunches</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Cycling (10 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Cycling (12 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Cycling (14 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Cycling (16 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Cycling (18 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Cycling (20 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Cycling (22 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>cycling moderate(12-14 Miles)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>cycling mountain</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>dancing</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>fencing</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Golf</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>gym cycling heavy-load</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>gym cycling light-load</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>gym cycling medium-load</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>gym cycling very-heavy</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>gym cycling very-light</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>hang gliding</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>hockey</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>horse racing</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>horse riding</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>ice sketing</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>jumping jacks</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Lunges</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>martial arts</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>mountain climbers</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>pull-ups</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Push-Ups</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>repling</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>rock climbing</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>roller skating</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Rope jump</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Running (5 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Running (6 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Running (7 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Running (8 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Running (9 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Running (10 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>scuba diving</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>sculling</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>sit-ups</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>skate boarding</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>sky diving</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>snorckling</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>squash</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>squats</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>squats heavy effort</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Swimming back-stroke</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Swimming breast-stroke</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Swimming butterfly</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>swimming freestyle stroke</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Swimming moderate</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>tennis double</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>tennis single</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>trucking</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>tubing floating</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Walk Nordic (with Poles)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Walk Fast (4 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Walking</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Walk slow (3 mph)</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>Warm up</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>water skiing</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>wrestling</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td><label>yoga</label></td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<th>stepping :-</th>
+			</tr><tr>
+				<td>stepping duration (minutes)</td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td>steps height (meters)</td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr><tr>
+				<td>steps/minute</td>
+				<th><input class="zero" type="text" value="0"></th>
+			</tr>
+		</table><br><br>
+		<div class="submit"><input type="submit" name= "sweatsub" id="sweatsubmit"></input></div>
+	</div>
+	<div id="burn">
+		<div class="inner">
+		<h2 class="text">Exercise</h2><br>
+		<select  class="radio" name="exercise">
+			<option disabled="true" selected style="text-align: center;">-- Select --</option>
+			<option value="1">Leg Press</option>
+			<option value="2">Bench Press</option>
+			<option value="3">Curling</option>
+		</select><br>
+		<h2 class="text">Goal</h2><br>
+		<select  class="radio" name="goal">
+			<option disabled="true" selected style="text-align: center;">-- Select --</option>
+			<option value="1">Endurace and Stability</option>
+			<option value="2">Endurance and Strength</option>
+			<option value="3">Hypertrophy</option>
+			<option value="4">Maximum Strength</option>
+			<option value="5">Strength and Power</option>
+		</select><br>
+		<input type="text" name="weightlift" id="weightlift" placeholder="Weight Lift">
+		<input type="text" name="reps" id="reps" placeholder="Repetition">
+		<br><input type="submit" name= "burnsub"></input></div>
+	</div>
+	<div id="intense">
+		<nav>
+		<table style="min-width:50%" >
+			<tr>
+			<td><label>Jogging Speed</label></td>
+			<th><input type="text" name="jogspeed" placeholder="6.5-7.9 km/hr" id="speed"></th>
+			</tr><tr>
+			<td><label>Running Speed</label></td>
+			<th><input type="text" name="runspeed" placeholder="above 8 km/hr" id="speed"></th>
+			</tr><tr>
+			<td><label>Rise</label></td>
+			<th><input type="text" name="rise" placeholder="Rise" id="rise"></th>
+			</tr><tr>
+			<td><label>Run</label></td>
+			<th><input type="text" name="run" placeholder="Run" id="run"></th>
+			</tr><tr>
+			<td><label>Gradient</label></td>
+			<th><input id="grad" name="gradient" value="0" readonly></input></th>
+			</tr><tr>
+			<td><label>Weight</label></td>
+			<th><input type="text" name="hitweight" placeholder="Kg" id="weight"></th>
+			</tr><tr>
+			<td><label>Time</label></td>
+			<th><input type="text" name="time" placeholder="Minutes" id="time"></th>
+			</tr><tr>
+			<td><label>Number of Sets</label></td>
+			<th><input type="text" name="hitsets" placeholder="Number" id="sets"></th>
+			</tr><tr>
+			<td><label>Total Time</label></td>
+			<th><p id="totaltime"></p></th>
+			</tr>
+		</table>
+			<input type="submit" name= "intensesub"></input>
+		</nav>
+	</div>
+	</form>
+</body>
+</html>
+    
