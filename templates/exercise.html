@@ -8,8 +8,8 @@
 	<link href="{% static 'css/exercise.css' %}" rel="stylesheet">
 </head>
 <body onload="info()">
-	<form class="container" action="burn_output" method="post">
-		{% csrf_token %} 
+	<!-- <form class="container" action="burn_output" method="post"> -->
+		<!-- {% csrf_token %}  -->
 	<div class="navbar">
 		<p>EXERCISE</p>
 		<nav class="nav-area">
@@ -338,7 +338,64 @@
 			<input type="submit" name= "intensesub"></input>
 		</nav>
 	</div>
-	</form>
+	<!-- </form> -->
 </body>
+<script type="text/javascript">
+	function showStuff(id,elem,mine) {
+	    document.getElementById(id).style.display = 'block';
+	    document.getElementById(elem).style.display = 'none';
+	    document.getElementById(mine).style.display = 'none';
+	}
+	var buttons = document.querySelectorAll("a");
+	for (button in buttons) {
+		buttons[button].onclick = function() {
+			buttons.forEach(function(btn){
+				btn.classList.remove('highlight');
+			})
+			this.classList.add('highlight');
+		}
+	}
+	function info() {
+		document.getElementById("totaltime").innerHTML = "0 Minutes";
+		document.getElementById("grad").innerHTML = "0 Degree";
+		sweatbtn.click();
+	}
+	var time = document.getElementById("time");
+	var sets = document.getElementById("sets");
+	time.addEventListener("keyup",myResult);
+	sets.addEventListener("keyup",myResult);
+
+	function myResult(){
+		var timevalue = time.value;
+		var setsvalue = sets.value;
+		var output = timevalue * 2 * setsvalue;
+		document.getElementById("totaltime").innerHTML= output+" Minutes"; 
+	}
+
+	var run = document.getElementById("run");
+	var rise = document.getElementById("rise");
+	run.addEventListener("keyup",gradientdegree);
+	rise.addEventListener("keyup",gradientdegree);
+
+	function gradientdegree(){
+		var runvalue = run.value;
+		var risevalue = rise.value;
+		var output = runvalue / risevalue;
+		let out = Math.round(output)
+		document.getElementById("grad").value= out; 
+	}
+
+	$("#sweat").click(function() {
+		var sweatlist = [];
+		var sweatvalList = [];
+		$('#sweattable tr td label').each(function() {
+			sweatlist.push($(this).text());
+		});
+			sweatlist.push('Stepping')
+		$('#sweattable tr th input').each(function() {
+			sweatvalList.push($(this).val());
+		});
+    });
+</script>
 </html>
     
