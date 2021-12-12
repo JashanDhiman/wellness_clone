@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="{% static 'css/food1.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/all.css' %}" rel="stylesheet" />
+    <style type="text/css">
+      th {
+        color: lawngreen;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="food_output" method="post">
+      {% csrf_token %}
+      <div class="container">
+        <div class="tabble">
+          <div class="col">
+            <div>
+              <label class="ac_trigger" for="ac1">
+                <input
+                  type="text"
+                  id="myInput"
+                  onkeyup="myFunction()"
+                  placeholder="Search Your Food Names.."
+                  title="Type in a name"
+                />
+                &nbsp;<i class="fa fa-search"></i>
+              </label>
+            </div>
+            <br />
+            <div class="ac_container" id="div1">
+              <table id="myTable">
+                <tr class="header" id="heading" style="display: none">
+                  <th style="width: 80%">Name</th>
+                  <th style="width: 20%; padding: 4px">Select</th>
+                </tr>
+              </table>
+            </div>
+            <br />
+            <div class="ac_container" id="divtable">
+              <table id="myTable1">
+                <tr class="header">
+                  <th style="width: 80%">Selected Items</th>
+                  <th style="width: 20%">Intake(gm)</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="submit">Submit</button><br />
+      </div>
+    </form>
+
+  </body>
+</html>
