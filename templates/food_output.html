@@ -1,0 +1,289 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>drop down</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/food_output.css' %}"
+    />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="main">
+        <label class="ac_triggers">
+          <label style="color: yellow"
+            >Note : Click on Nutreints name to view details of specific nutrient
+            And to decrease deviation click on that specific block.</label
+          ><br /><br />
+          <table>
+            <tr>
+              <th rowspan="2">Nutrients</th>
+              <th rowspan="2">Total Intake</th>
+            </tr>
+            <tr>
+              <th>Standard (Grams Required)</th>
+              <th>Deviation (Grams)</th>
+            </tr>
+            <tr>
+              <th
+                class="ancor"
+                onclick="showStuff('div1', this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)"
+              >
+                Energy (kcal)
+              </th>
+              <td>1550</td>
+              <td>2550</td>
+              <td
+                class="ancor"
+                onclick="showStuff('dev1', this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)"
+              >
+                -1000
+              </td>
+            </tr>
+            <tr>
+              <th>Carbohydrate (gm)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Protein (gm)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Visible Fat (gm)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Calcium (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Iron (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Riboflavin (Vit-B2) (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Nicotinic (Vit-B3) (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>B6 (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>B12 (mcg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Retinol (mcg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Zinc (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Sodium (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Potassium (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Magnesium (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Phosphorus (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Thiamine (Vit-B1) (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Vitamin-C (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Vitamin-D (mcg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Vitamin-E (mg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Vitamin-K (mcg)</th>
+              <td>1550</td>
+              <td>2550</td>
+              <td>-1000</td>
+            </tr>
+
+            <tr>
+              <th>Carotene(Vitamin-A) (mcg)</th>
+              <td>1515</td>
+            </tr>
+            <tr>
+              <th>Total Folic-Acid(Vit-B9)</th>
+            </tr>
+            <tr>
+              <th>Paral-Value</th>
+              <td>-52.5</td>
+            </tr>
+          </table>
+          <br /><br />
+        </label>
+        <a href="#" id="submit" class="btn">Submit</a>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="nutrients" id="div1">
+        <nav class="n_container">
+          <label class="n_trigger">Energy</label>
+          <a
+            class="close"
+            onclick="hide('div1',this.parentNode.parentNode.parentNode.previousElementSibling); return false;"
+            >&#129044;</a
+          >
+          <table>
+            <th>Selected Food Names</th>
+            <th>Calories (kcal)</th>
+            <tr>
+              <td>Cheese Chadder</td>
+              <td>1550</td>
+            </tr>
+          </table>
+        </nav>
+      </div>
+    </div>
+    <div class="container3">
+      <div class="nutrients" id="dev1">
+        <nav class="n_container">
+          <label class="n_trigger">Good Energy</label>
+          <table>
+            <tr>
+              <th>Food Names</th>
+              <th>Energy / gm</th>
+              <th>Select</th>
+              <th>Intake</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <td>Ghee cow milk</td>
+              <td>9009</td>
+              <td>
+                <input
+                  id="btn"
+                  type="button"
+                  value="Add"
+                  name="ghee cow milk"
+                  onclick="add_item(this, this.parentNode.nextSibling.nextSibling)"
+                />
+              </td>
+              <td style="display: none">
+                <input
+                  id="btn"
+                  type="button"
+                  name="ghee cow milk"
+                  value="Remove"
+                  onclick="remove_item(this,this.parentNode.previousElementSibling)"
+                />
+              </td>
+              <td>
+                <input
+                  type="Number"
+                  name="some"
+                  id="jas"
+                  value="0"
+                  oninput="updatevalue(this,this.value,9009)"
+                  disabled
+                />
+              </td>
+              <td class="int-input">0</td>
+            </tr>
+          </table>
+          <br />
+          <label>Total = </label><label class="total">0</label><br />
+          <label>Deviation = </label
+          ><label>1515%</label> <br /><br />
+          <button
+            class="btn"
+            onclick="hide('dev1',this.parentNode.parentNode.parentNode.previousElementSibling.previousElementSibling); return false;"
+          >
+            Submit
+          </button>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

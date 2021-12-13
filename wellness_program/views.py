@@ -18,8 +18,8 @@ def exercise(request):
 #     return render(request, "burn_output.html")
 def food(request):
     return render(request, "food.html")
-# def food_output(request):
-#     return render(request, "food_output.html")
+def food_output(request):
+    return render(request, "food_output.html")
 # def disease(request):
 #     return render(request, "disease.html")
 # def yoga(request):
