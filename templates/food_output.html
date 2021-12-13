@@ -275,7 +275,7 @@
           <br />
           <label>Total = </label><label class="total">0</label><br />
           <label>Deviation = </label
-          ><label>1515%</label> <br /><br />
+          ><label> 420</label> <br /><br />
           <button
             class="btn"
             onclick="hide('dev1',this.parentNode.parentNode.parentNode.previousElementSibling.previousElementSibling); return false;"
@@ -285,5 +285,23 @@
         </nav>
       </div>
     </div>
+    <script type="text/javascript">
+      function showStuff(id, elem) {
+        document.getElementById(id).style.display = "block";
+        elem.style.display = "none";
+      }
+      function hide(id, mine) {
+        document.getElementById(id).style.display = "none";
+        mine.style.display = "block";
+      }
+      function add_item(item, next) {
+        item.parentNode.style.display = "none";
+        next.style.display = "block";
+      }
+      function remove_item(item, prev) {
+        item.parentNode.style.display = "none";
+        prev.style.display = "block";
+      }
+    </script>
   </body>
 </html>
