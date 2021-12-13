@@ -1,0 +1,119 @@
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: sans-serif;
+	font-size: 18px;
+	margin: 0;
+	background: rgb(0,0,136);
+	background: radial-gradient(circle, rgba(0,0,136,1) 0%, rgba(0,0,0,1) 100%);
+	text-align: center;
+}
+.container,.container2,.container3{
+	padding: 10px;
+	width: 90%;
+	min-height: fit-content;
+	max-width: 700px;
+	margin: 0 auto;
+}
+.ac_trigger, .ac_triggers,.n_trigger{
+	display: block;
+	color: #00FFFF;
+	font-size: 18px;
+	/*height: inherit;*/
+	color: white;
+}
+.n_trigger{
+	font-size: 30px;
+}
+.ac_container,.n_container{
+	margin-bottom: 1px;
+	background-color: transparent;
+	color: #00ffff;
+}
+.nutrients{
+	display: none;
+}
+.ac_container{
+	border: 2px solid #00FFFF;
+}
+.n_container{
+	padding-bottom: 20px;
+}
+.ac_hide{
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+.ac_hide:checked + .ac_container{
+	height: auto;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  transition: all 200ms;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.close:hover {
+  color: #00FFFF;
+}
+#btn,.btn{
+	color: cyan;
+	background: transparent;
+	border: 1px solid cyan;
+	border-radius: 20px;
+	padding: 4px 8px;
+	cursor: pointer;
+}#btn{	font-size: 16px;}.btn{	font-size: 25px;}
+#btn:hover,.btn:hover{color: black;background: cyan;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  border-radius: 10px;
+  border: 1px solid #00FFFF;
+  background-color: transparent;
+  color: #00FFFF;
+  text-align: center;
+  outline: none;
+  width: 80px;
+  font-size: 16px;
+}
+table{
+	width: 100%;
+}
+table, th, td {
+  border: 1px solid #00FFFF;
+  border-collapse: collapse;
+  color: #00FFFF;
+}
+tr{
+	border: 0;
+}
+th, td {
+  padding: 6px;
+  width: 100%;
+}
+td {
+  text-align: center;
+}
+a{
+	text-decoration:  none;
+	font-size: 18px;
+}
+.ancor:hover{
+	cursor: pointer;
+	background: cyan;
+	color: black !important;
+}
