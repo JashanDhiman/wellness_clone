@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>disease-wise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/disease2.css' %}" />
+    <script type="text/javascript">
+      function show(id, elem) {
+        document.getElementById(id).style.display = "block";
+        elem.style.display = "none";
+      }
+      function hide(id, mine) {
+        document.getElementById(id).style.display = "block";
+        mine.style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="disease">
+      <div id="header">SELECT</div>
+      <div class="ol">
+        <ol>
+          <li
+            style="font-size: 20px"
+            onclick="show('div1', this.parentNode.parentNode.parentNode)"
+          >
+            Acidity
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div2', this.parentNode.parentNode.parentNode)"
+          >
+            Asthma
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div3', this.parentNode.parentNode.parentNode)"
+          >
+            Blood Pressure
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div4', this.parentNode.parentNode.parentNode)"
+          >
+            Backache
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div5', this.parentNode.parentNode.parentNode)"
+          >
+            Carpel Tunnel Syndrome
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div6', this.parentNode.parentNode.parentNode)"
+          >
+            Cholesterol
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div7', this.parentNode.parentNode.parentNode)"
+          >
+            Diabetes
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div8', this.parentNode.parentNode.parentNode)"
+          >
+            Epilepsy
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div9', this.parentNode.parentNode.parentNode)"
+          >
+            Gall Bladder
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div10', this.parentNode.parentNode.parentNode)"
+          >
+            Heart Diseases
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div11', this.parentNode.parentNode.parentNode)"
+          >
+            Hemoglobin
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div12', this.parentNode.parentNode.parentNode)"
+          >
+            Haemorrhoids (Piles)
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div13', this.parentNode.parentNode.parentNode)"
+          >
+            Iodine Disorder
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div14', this.parentNode.parentNode.parentNode)"
+          >
+            Migraine
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div15', this.parentNode.parentNode.parentNode)"
+          >
+            Obesity
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div16', this.parentNode.parentNode.parentNode)"
+          >
+            PCOS (Poly Cystic Ovarian Syndrome)
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div17', this.parentNode.parentNode.parentNode)"
+          >
+            Pellagra
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div18', this.parentNode.parentNode.parentNode)"
+          >
+            Prostrate
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div19', this.parentNode.parentNode.parentNode)"
+          >
+            Sciatica
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div20', this.parentNode.parentNode.parentNode)"
+          >
+            Spondylitis
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div21', this.parentNode.parentNode.parentNode)"
+          >
+            Thyroid
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div22', this.parentNode.parentNode.parentNode)"
+          >
+            Uric acid
+          </li>
+          <li
+            style="font-size: 20px"
+            onclick="show('div23', this.parentNode.parentNode.parentNode)"
+          >
+            Vitamin-D Deficiency
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
