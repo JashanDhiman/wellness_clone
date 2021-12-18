@@ -22,8 +22,8 @@ def food_output(request):
     return render(request, "food_output.html")
 def disease(request):
     return render(request, "disease.html")
-# def yoga(request):
-#     return render(request, "yoga.html")
+def yoga(request):
+    return render(request, "yoga.html")
 # def kriya(request):
 #     return render(request, "asans.html")
 # def yog_nidra(request):
