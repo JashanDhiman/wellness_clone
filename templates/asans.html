@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/disease.css' %}" />
     <title>asans_and_kriya</title>
+    <style>
+      .img {
+        width: fit-content;
+        margin: auto;
+      }
+      .img img {
+        max-width: 50%;
+      }
+    </style>
+    <script type="text/javascript">
+      function show(id, elem) {
+        document.getElementById(id).style.display = "block";
+        elem.style.display = "none";
+      }
+      function hide(id, mine) {
+        document.getElementById(id).style.display = "block";
+        mine.style.display = "none";
+      }
+    </script>
   </head>
   <body>
     <div id="disease">
@@ -373,52 +392,52 @@
             <ol>
               <!-- <li>Basic Knowledge of Pranayam</li> -->
               <li
-                onclick="show('asan1', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('1', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Diaphragmic Breathing
               </li>
               <li
-                onclick="show('asan2', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('2', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Anuloma Viloma
               </li>
               <li
-                onclick="show('asan3', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('3', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Kapalbhati
               </li>
               <li
-                onclick="show('asan4', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('4', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Suryabhedi
               </li>
               <li
-                onclick="show('asan5', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('5', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Chandrabhedi
               </li>
               <li
-                onclick="show('asan6', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('6', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Ujjai
               </li>
               <li
-                onclick="show('asan7', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('7', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Kapalbhati
               </li>
               <li
-                onclick="show('asan8', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('8', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Bhastrika
               </li>
               <li
-                onclick="show('asan9', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('9', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Nadi-Shodhan
               </li>
               <li
-                onclick="show('asan10', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('10', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Hamsa Pranayam
               </li>
@@ -429,52 +448,52 @@
             KRIYAS
             <ol>
               <li
-                onclick="show('asan1', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya1', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Understanding Ida, Pingla and Sushumana
               </li>
               <li
-                onclick="show('asan2', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya2', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Eight Pattern Kriya/ Hamsa
               </li>
               <li
-                onclick="show('asan3', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya3', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Yoga Mudra
               </li>
               <li
-                onclick="show('asan4', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya4', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Shakti Chalan in Subtle Body
               </li>
               <li
-                onclick="show('asan5', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya5', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Shambhavi or Lotus Visualization
               </li>
               <li
-                onclick="show('asan6', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya6', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Ha-Tha-Yoga-Shatkarm
               </li>
               <li
-                onclick="show('asan7', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya7', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Seven Practices
               </li>
               <li
-                onclick="show('asan8', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya8', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Asanas for Life force
               </li>
               <li
-                onclick="show('asan9', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya9', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Kriyas for Yauvan Tattva (Youthfulness)
               </li>
               <li
-                onclick="show('asan10', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                onclick="show('kriya10', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
                 Sushumana Movement
               </li>
