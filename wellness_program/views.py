@@ -24,8 +24,8 @@ def disease(request):
     return render(request, "disease.html")
 def yoga(request):
     return render(request, "yoga.html")
-# def kriya(request):
-#     return render(request, "asans.html")
+def kriya(request):
+    return render(request, "asans.html")
 # def yog_nidra(request):
 #     return render(request, "yognidra.html")
 # def system_wise(request):
