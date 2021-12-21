@@ -28,8 +28,8 @@ def kriya(request):
     return render(request, "asans.html")
 def yog_nidra(request):
     return render(request, "yognidra.html")
-# def system_wise(request):
-#     return render(request, "system-wise.html")
+def system_wise(request):
+    return render(request, "system-wise.html")
 # def upnishdic(request):
 #     return render(request, "upnishdik.html")
 # def natal(request):
