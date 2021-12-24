@@ -18,7 +18,7 @@ urlpatterns = [
     path('kriya' , views.kriya, name='kriya'),
     path('yog_nidra' , views.yog_nidra, name='yog_nidra'),
     path('system_wise' , views.system_wise, name='system_wise'),
-    # path('upnishdic' , views.upnishdic, name='upnishdic'),
-    # path('natal' , views.natal, name='natal'),
+    path('upnishdic' , views.upnishdic, name='upnishdic'),
+    path('natal' , views.natal, name='natal'),
     # path('more' , views.more, name='more'),
 ]

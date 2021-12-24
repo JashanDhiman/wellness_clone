@@ -30,9 +30,9 @@ def yog_nidra(request):
     return render(request, "yognidra.html")
 def system_wise(request):
     return render(request, "system-wise.html")
-# def upnishdic(request):
-#     return render(request, "upnishdik.html")
-# def natal(request):
-#     return render(request, "natal.html")
+def upnishdic(request):
+    return render(request, "upnishdik.html")
+def natal(request):
+    return render(request, "natal.html")
 # def more(request):
 #     return render(request, "more.html")

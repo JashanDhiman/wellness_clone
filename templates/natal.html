@@ -1,0 +1,342 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+  <head dir="ltr">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="{% static 'css/natal.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cards">
+        <div class="col">
+          <h1>Rashis</h1>
+          <ol>
+            <li>
+              <a
+                onclick="show('div1', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Aries or Maish</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div2', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Taurus or Vrish</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div3', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Gemini or Mithun</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div4', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Cancer or Kark</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div5', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Leo or Singh</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div6', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Virgo or Kanya</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div7', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Libra or Tula</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div8', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Scorpio or Vrishchik</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div9', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Sagittarius or Dhanu</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div10', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Capricorn or Makar</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div11', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Aquarius or Kumbh</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div12', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Pisces or Meen</a
+              >
+            </li>
+          </ol>
+        </div>
+        <div class="col">
+          <h1>Planets</h1>
+          <ol>
+            <li>
+              <a
+                onclick="show('div13', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Sun</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div14', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Moon</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div15', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Mars</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div16', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Mercury
+              </a>
+            </li>
+            <li>
+              <a
+                onclick="show('div17', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Jupiter
+              </a>
+            </li>
+            <li>
+              <a
+                onclick="show('div18', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Venus</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div19', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Saturn</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div20', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Rahu</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div21', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Ketu</a
+              >
+            </li>
+          </ol>
+        </div>
+        <div class="col">
+          <h1>Nakshtras</h1>
+          <ol>
+            <li>
+              <a
+                onclick="show('div22', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Ashwini</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div23', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Bharani</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div24', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Krittika</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div25', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Rohini</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div26', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Mrighasira</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div27', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Ardra</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div28', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Punarvasu</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div29', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Pushya</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div30', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Ashlesha</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div31', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Magha</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div32', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Purva Phalguni</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div33', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Uttara Phalguni</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div34', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Hasta</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div35', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Chitra</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div36', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Swati</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div37', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Vishaka</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div38', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Anuradha</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div39', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Jyestha</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div40', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Moola</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div41', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Purv Ashada</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div42', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Uttar Ashada</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div43', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Sharavan</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div44', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Dhanishta</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div45', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Shatabisha</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div46', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Purv Bahadrapada</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div47', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Uttar Bahadrapada</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="show('div48', this,this.parentNode.parentNode.parentNode.parentNode); return false;"
+                >Revati</a
+              >
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="main">
+        <div id="div1" class="text">
+          <h1>Aries (Mesh) : 21 Mar to 20 April</h1>
+          <a
+            class="close"
+            onclick="hide('div1',this,this.parentNode.parentNode.previousElementSibling); return false;"
+            >&times;</a
+          >
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit itaque aliquid illo quaerat non totam unde omnis
+            corporis fugit culpa molestias earum ullam, eius suscipit quisquam,
+            consequatur eveniet rerum accusantium! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Voluptate reprehenderit cupiditate ut,
+            maxime optio quisquam dolor nesciunt commodi neque adipisci ex alias
+            omnis quis facilis! Nostrum delectus qui adipisci incidunt!Lorem
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque
+            earum quibusdam perspiciatis repellendus culpa provident, dolore
+            fugiat atque officia iure exercitationem nihil quasi labore minus
+            veritatis quod accusamus omnis!
+          </p>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>
