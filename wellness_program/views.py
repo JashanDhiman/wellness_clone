@@ -14,8 +14,8 @@ def body_output(request):
     return render(request, "body_output.html")
 def exercise(request):
     return render(request, "exercise.html")
-# def burn_output(request):
-#     return render(request, "burn_output.html")
+def burn_output(request):
+    return render(request, "burn_output.html")
 def food(request):
     return render(request, "food.html")
 def food_output(request):
@@ -34,5 +34,3 @@ def upnishdic(request):
     return render(request, "upnishdik.html")
 def natal(request):
     return render(request, "natal.html")
-# def more(request):
-#     return render(request, "more.html")
