@@ -1,0 +1,330 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/report.css' %}">
+{% endblock %}
+
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+
+{% block content %}
+<div class="printcontainer">
+	<div class="container" id="cont1">	<h2>Body Basics Details</h2><br>
+		<table>
+            <tr>
+                <th>BMR</th>
+                <td>:</td>
+                <td>2756 Kcal</td>
+            </tr><tr>
+                <th>BMI</th>
+                <td>:</td>
+                <td>123 moderate</td>
+            </tr><tr>
+                <th>BODY FAT</th>
+                <td>:</td>
+                <td>12%</td>
+            </tr><tr>
+                <th>BODY TYPE</th>
+                <td>:</td>
+                <td>Athlete</td>
+            </tr><tr>
+                <th>MAXIMUM HEART RATE</th>
+                <td>:</td>
+                <td>185</td>
+            </tr><tr>
+                <th>HEART RATE RESERVE</th>
+                <td>:</td>
+                <td>165</td>
+            </tr><tr>
+                <th>WARM UP HEART RATE</th>
+                <td>:</td>
+                <td>172</td>
+            </tr><tr>
+                <th>FAT BURNING HEART RATE</th>
+                <td>:</td>
+                <td>176</td>
+            </tr><tr>
+                <th>AEROBIC HEART RATE</th>
+                <td>:</td>
+                <td>187</td>
+            </tr><tr>
+                <th>ANAEROBIC HEART RATE</th>
+                <td>:</td>
+                <td>186</td>
+            </tr><tr>
+                <th>VO2 MAX. HEART RATE</th>
+                <td>:</td>
+                <td>185</td>
+            </tr>
+      </table>
+		<br><hr><br>
+	</div>
+	<div class="container" id="cont2">
+		<h2>Food Intake</h2><br>
+		<div id="main">			
+			<table>
+                <tr>
+                  <th rowspan="2">Nutrients</th>
+                  <th rowspan="2">Total Intake</th>
+                </tr>
+                <tr>
+                  <th>Standard (Grams Required)</th>
+                  <th>Deviation (Grams)</th>
+                </tr>
+                <tr>
+                  <th
+                    class="ancor"
+                    onclick="showStuff('div1', this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                  >
+                    Energy (kcal)
+                  </th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td
+                    class="ancor"
+                    onclick="showStuff('dev1', this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)"
+                  >
+                    -1000
+                  </td>
+                </tr>
+                <tr>
+                  <th>Carbohydrate (gm)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Protein (gm)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Visible Fat (gm)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Calcium (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Iron (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Riboflavin (Vit-B2) (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Nicotinic (Vit-B3) (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>B6 (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>B12 (mcg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Retinol (mcg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Zinc (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Sodium (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Potassium (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Magnesium (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Phosphorus (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Thiamine (Vit-B1) (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Vitamin-C (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Vitamin-D (mcg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Vitamin-E (mg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Vitamin-K (mcg)</th>
+                  <td>1550</td>
+                  <td>2550</td>
+                  <td>-1000</td>
+                </tr>
+    
+                <tr>
+                  <th>Carotene(Vitamin-A) (mcg)</th>
+                  <td>1515</td>
+                </tr>
+                <tr>
+                  <th>Total Folic-Acid(Vit-B9)</th>
+                </tr>
+                <tr>
+                  <th>Paral-Value</th>
+                  <td>-52.5</td>
+                </tr>
+              </table>
+		</div>
+		<br><hr><br>
+	</div>
+	<div class="container" id="cont3">
+		<div id="ex1"><h2>Activities</h2><br>
+	<table>
+		<tr><th>Exercises</th><th>Calories Burn</th></tr>
+        <tr><td>Boxing </td><td> 82 kcal</td></tr>
+		<tr><td>Cycling </td><td> 63 kcal</td></tr>
+		<tr><td>Martial-Arts </td><td> 45 kcal</td></tr>
+	</table><br><hr></div><div id="ex2"><table>
+		<br><h2>HIIT</h2><br>
+		<tr><td>HIIT </td><td> 256 kcal</td></tr>
+		<tr><td>Jog </td><td> 100 kcal</td></tr>
+		<tr><td>Run </td><td> 156 kcal</td></tr>
+
+	</table><br><hr></div>
+	<br><div id="ex3"><h2>GYM</h2><br>
+		<h2>Practice on following :-</h2>
+	<table id="end-stab">
+		<tr> 
+			<td>Weight</td>
+			<td>60 kg</td>
+		</tr><tr> 
+			<td>Set</td>
+			<td>2 to 3</td>
+		</tr><tr>
+			<td>Repetitions</td>
+			<td>12 to 20</td>
+		</tr><tr>
+			<td>Tempo(in seconds)</td>
+			<td>4,2,1</td>
+		</tr><tr>
+			<td>Rest</td>
+			<td>0 to 60 seconds</td>
+		</tr><tr>
+			<td>Frequency/ Week</td>
+			<td>3 Times</td>
+		</tr><tr> 
+			<td>Energy Consumed</td>
+			<td>2 to 3</td>
+		</tr>
+	</table>
+	<br><hr><br></div>
+	</div>
+	<h2>Overall Calories InTake = 2556 kcal</h2><br>
+	<h2>Overall Calories Spent = 1556 kcal</h2><br>
+	<h2>Weight Increase by 1000 grams</h2><br>
+
+</div>
+<div class="printbtncontainer">
+	<a href="#" id="btnPrint" class="btn">Download</a><br><br>
+</div>
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+	 $("#btnPrint").click(function () {
+		var divContents = $(".printcontainer").html();
+		var printWindow = window.open('', '', 'height=400,width=800');
+		printWindow.document.write('<html><head><title>Full Report by Nirvanasage</title>');
+		printWindow.document.write('<link rel="stylesheet" href="../static/css/report.css" />');
+		printWindow.document.write('</head><body>');
+		printWindow.document.write(divContents);
+		printWindow.document.write('</body></html>');
+		printWindow.document.close();
+		printWindow.print();	});
+</script>
+{% endblock %}
