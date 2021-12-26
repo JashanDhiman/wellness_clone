@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.printcontainer{
+    font-family: system-ui;
+    padding: 1%;
+    font-size: clamp(0.1rem,3.5vw,1.3rem) !important;
+}
+.printbtncontainer, h2{
+    text-align: center;
+    color: lawngreen;
+    font-size: clamp(0.1rem,3.5vw,1.5rem) !important;
+}
+.printbtncontainer #btnPrint{
+    color: lawngreen;
+    text-decoration: none;
+    border: 2px solid lawngreen;
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+}
+.printbtncontainer #btnPrint:hover{
+    color: #151320;
+    background-color: lawngreen;
+}
+table{
+    text-transform: capitalize;
+    border-collapse: collapse;
+    border: 1px solid grey;
+    width: fit-content;	
+    text-align: center;	
+    margin: auto;
+}
+th{
+    padding: 0.5rem;
+    border: 1px solid grey;
+    font-size: clamp(0.1rem,3.5vw,1.5rem) !important;
+    color: #D3D3D3;
+}
+td{
+    border: 0.1px solid grey;
+    color: #C0C0C0;
+}
