@@ -87,3 +87,6 @@ h1{
 .close:hover {
   color: #00FFFF;
 }
+li,.close{cursor: pointer;}
+p{text-align: justify;font-size: 25px;}
+text{background-color: lightgrey;color: black !important;}
