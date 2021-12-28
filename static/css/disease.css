@@ -147,6 +147,13 @@ p{
 	color: lawngreen;
 	font-weight: 600;
 }
+.img {
+	width: fit-content;
+	margin: auto;
+}
+.img img {
+	max-width: 50%;
+}
 b{
 	color: magenta;
 }
