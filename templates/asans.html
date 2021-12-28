@@ -1,32 +1,54 @@
+{% extends 'navbar.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/disease.css' %}" />
-    <title>asans_and_kriya</title>
-    <style>
-      .img {
-        width: fit-content;
-        margin: auto;
-      }
-      .img img {
-        max-width: 50%;
-      }
-    </style>
-    <script type="text/javascript">
-      function show(id, elem) {
-        document.getElementById(id).style.display = "block";
-        elem.style.display = "none";
-      }
-      function hide(id, mine) {
-        document.getElementById(id).style.display = "block";
-        mine.style.display = "none";
-      }
-    </script>
-  </head>
-  <body>
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/disease2.css' %}">
+<style>
+	.img{
+		width: fit-content;
+		margin: auto;
+	}
+	.img img{
+		max-width: 50%;
+	}
+	</style>
+{% endblock %}
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+{% block script %}
+	<script type="text/javascript">
+		function show(id,elem) {
+		    document.getElementById(id).style.display = 'block';
+		  	elem.style.display = 'none';
+		}
+		function hide(id,mine) {
+		    document.getElementById(id).style.display = 'block';
+		  	mine.style.display = 'none';
+		}
+	</script>	
+{% endblock %}
+
+{% block content %}
     <div id="disease">
       <div id="header">SELECT</div>
       <div class="ol">
@@ -390,7 +412,6 @@
           <li class="mainli">
             PRANAYAMS
             <ol>
-              <!-- <li>Basic Knowledge of Pranayam</li> -->
               <li
                 onclick="show('1', this.parentNode.parentNode.parentNode.parentNode.parentNode)"
               >
