@@ -1,14 +1,32 @@
+{% extends 'navbar.html' %}
+{% block stylesheet %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" href="{% static 'css/body_output.css' %}">
-		<title>BODY OUTPUT</title>
-	</head>
-	<body>
+<link rel="stylesheet" href="{% static 'css/body_output1.css' %}">
+{% endblock %}
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+{% block content %}
 		<div class="div">	<h1>BODY<h1>
 			<table style="width: 100%">
 				  <tr>
@@ -58,5 +76,4 @@
 				  </tr>
 			</table>
 		</div>
-	</body>
-</html>
+{% endblock %}
