@@ -1,22 +1,32 @@
+{% extends 'navbar.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>drop down</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/food_output.css' %}"
-    />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/food_output.css' %}">
+{% endblock %}
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+{% block content %}
     <div class="container">
       <div id="main">
         <label class="ac_triggers">
@@ -285,23 +295,72 @@
         </nav>
       </div>
     </div>
-    <script type="text/javascript">
-      function showStuff(id, elem) {
-        document.getElementById(id).style.display = "block";
-        elem.style.display = "none";
-      }
-      function hide(id, mine) {
-        document.getElementById(id).style.display = "none";
-        mine.style.display = "block";
-      }
-      function add_item(item, next) {
+    {% endblock %}
+{% block script %}
+<script type="text/javascript">
+  function updatevalue(item, value, data) {
+	  var td = item.parentNode.nextElementSibling;
+	  var div = item.parentNode.parentNode.parentNode.parentNode.parentNode;
+	  var onupdate = 0;
+	  if (value) {
+	    onupdate = data * value;
+	  } else if (value === 0) {
+	    onupdate = data * 0;
+	  } else {
+	    onupdate = data * 0;
+	  }
+	  td.innerHTML = parseFloat(onupdate).toFixed(2).replace(/(\.0*|(?<=(\..*))0*)$/, '');
+	  var totalValues = div.querySelectorAll(".int-input");
+	  var total = 0;
+	  totalValues.forEach((k) => {
+	    total += parseFloat(k.innerHTML);
+	  });
+	  div.querySelector('.total').innerHTML = total;
+	}
+
+	function showStuff(id,elem) {
+	    document.getElementById(id).style.display = 'block';
+	  	elem.style.display = 'none';
+	}
+	function hide(id,mine) {
+	    document.getElementById(id).style.display = 'none';
+	  	mine.style.display = 'block';
+	}
+	var list = [];
+	var valList =[];
+	function add_item(item,next) {
+        list.push(item.name);
         item.parentNode.style.display = "none";
         next.style.display = "block";
-      }
-      function remove_item(item, prev) {
-        item.parentNode.style.display = "none";
-        prev.style.display = "block";
-      }
-    </script>
-  </body>
-</html>
+    	item.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.value = '';
+        item.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.disabled = false;
+        item.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.focus();
+        console.log(list,valList)
+     }
+	function remove_item(item,prev){
+		var in_val = item.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML;
+		var total_out = item.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.total').innerHTML;
+	  	item.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.total').innerHTML = total_out - in_val;
+    	item.parentNode.nextSibling.nextSibling.firstChild.disabled = true;
+    	item.parentNode.nextSibling.nextSibling.firstChild.value = 0;
+    	item.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML = 0;
+	  for (var i = 0; i <= list.length; i++) {
+	    if (list[i]===item.name) {
+	      list.splice(i,1); 
+	        }      }
+	  item.parentNode.style.display = "none";
+	  prev.style.display = "block"; 
+	   }
+	$("#btnPrint").click(function () {
+		var divContents = $(".printcontainer").html();
+		var printWindow = window.open('', '', 'height=400,width=800');
+		printWindow.document.write('<html><head><title>Food Details by nirvanasage</title>');
+		printWindow.document.write('<link rel="stylesheet" href="../static/css/print.css" />');
+		printWindow.document.write('</head><body >');
+		printWindow.document.write(divContents);
+		printWindow.document.write('</body></html>');
+		printWindow.document.close();
+		printWindow.print();
+	});
+</script>
+{% endblock %}
