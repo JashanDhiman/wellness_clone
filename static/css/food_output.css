@@ -4,44 +4,35 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
-body{
-	font-family: sans-serif;
-	font-size: 18px;
-	margin: 0;
-	background: rgb(0,0,136);
-	background: radial-gradient(circle, rgba(0,0,136,1) 0%, rgba(0,0,0,1) 100%);
-	text-align: center;
-}
 .container,.container2,.container3{
-	padding: 10px;
 	width: 90%;
 	min-height: fit-content;
 	max-width: 700px;
 	margin: 0 auto;
+	font-size: clamp(0.2rem,3.5vw,1.2rem);
+    text-align: center;
+    padding: 0.5rem 0;
+    color: #D3D3D3;
 }
 .ac_trigger, .ac_triggers,.n_trigger{
 	display: block;
-	color: #00FFFF;
-	font-size: 18px;
-	/*height: inherit;*/
-	color: white;
-}
-.n_trigger{
-	font-size: 30px;
+	color: #D3D3D3;
+	font-size: clamp(0.2rem,3.5vw,1.2rem);
+	color: #D3D3D3;
 }
 .ac_container,.n_container{
 	margin-bottom: 1px;
 	background-color: transparent;
-	color: #00ffff;
+	color: #D3D3D3;
 }
 .nutrients{
 	display: none;
 }
 .ac_container{
-	border: 2px solid #00FFFF;
+	border: 2px solid white;
 }
 .n_container{
-	padding-bottom: 20px;
+	padding: 2rem 0;
 }
 .ac_hide{
 	position: absolute;
@@ -53,27 +44,35 @@ body{
 }
 .close {
   position: absolute;
-  top: 10px;
-  left: 25px;
-  transition: all 200ms;
-  font-size: 40px;
+  top: 1%;
+  left: 1%;
+  font-size: clamp(0.5rem,3.5vw,6rem);
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: lawngreen;
   cursor: pointer;
 }
 .close:hover {
-  color: #00FFFF;
+  color: #D3D3D3;
 }
 #btn,.btn{
-	color: cyan;
 	background: transparent;
-	border: 1px solid cyan;
 	border-radius: 20px;
-	padding: 4px 8px;
+	padding: 0.1rem 0.3rem;
 	cursor: pointer;
-}#btn{	font-size: 16px;}.btn{	font-size: 25px;}
-#btn:hover,.btn:hover{color: black;background: cyan;}
+}
+#btn{
+	font-size: clamp(0.2rem,3.5vw,1rem);
+    color: #D3D3D3;
+	border: 1px solid white;
+}
+#btn:hover{color: black;background: white;}
+.btn{
+	font-size: clamp(0.2rem,3.5vw,1.5rem);
+    color: lawngreen;
+	border: 1px solid lawngreen;
+}
+.btn:hover{color: black;background: lawngreen;}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -82,27 +81,31 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
   border-radius: 10px;
-  border: 1px solid #00FFFF;
+  border: 1px solid white;
   background-color: transparent;
-  color: #00FFFF;
+  color: #D3D3D3;
   text-align: center;
   outline: none;
-  width: 80px;
-  font-size: 16px;
+  width: clamp(0.2rem,10.5vw,6.2rem);
 }
 table{
 	width: 100%;
 }
 table, th, td {
-  border: 1px solid #00FFFF;
+  border: 0.001rem solid grey;
   border-collapse: collapse;
-  color: #00FFFF;
+  color: #D3D3D3;
+}
+th{
+    color: lawngreen;
+    text-transform: uppercase;
+	font-size: clamp(0.2rem,3.5vw,1.2rem);
 }
 tr{
 	border: 0;
 }
 th, td {
-  padding: 6px;
+  padding: 0.3rem;
   width: 100%;
 }
 td {
@@ -114,6 +117,6 @@ a{
 }
 .ancor:hover{
 	cursor: pointer;
-	background: cyan;
+	background: grey;
 	color: black !important;
 }
