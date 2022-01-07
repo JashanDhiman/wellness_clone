@@ -1,75 +1,138 @@
+{% extends 'navbar.html' %}
+{% block stylesheet %}
+{% load static %}
+  <link href="{% static 'css/food.css' %}" rel="stylesheet">
+  <link href="{% static 'css/all.css' %}" rel="stylesheet">
+{% endblock %}
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+
+{% block content %}
 {% load static %}
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="{% static 'css/food.css' %}" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <style type="text/css"></style>
   </head>
-  <body>
-    <form action="food_output" method="post">
-      {% csrf_token %}
-      <div class="container">
-        <div class="tabble">
-          <div class="col">
-            <div>
-              <label class="ac_trigger" for="ac1">
-                <input
-                  type="text"
-                  id="myInput"
-                  onkeyup="myFunction()"
-                  placeholder="Search Your Food Names.."
-                  title="Type in a name"
-                />
-                &nbsp;<i class="fa fa-search"></i>
-              </label>
-            </div>
-            <br />
-            <div class="ac_container" id="div1">
-              <table id="myTable">
-                <tr class="header" id="heading" style="display: none">
-                  <th style="width: 80%">Name</th>
-                  <th style="width: 20%; padding: 4px">Select</th>
-                </tr>
-              </table>
-            </div>
-            <br />
-            <div class="ac_container" id="divtable">
-              <table id="myTable1">
-                <tr class="header">
-                  <th style="width: 80%">Selected Items</th>
-                  <th style="width: 20%">Intake(gm)</th>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-        <button type="submit" id="submit">Submit</button><br />
+<body>
+
+  <form action="food_output" method="post">
+    {% csrf_token %}
+   <div class="container">
+      <div class="search-bar">
+        <label class="ac_trigger" for="ac1">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Your Food Names.." title="Type in a name">
+        &nbsp;<i class="fa fa-search"></i>
+        </label>
       </div>
-    </form>
-    <script type="text/javascript">
-      function myFunction() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        document.getElementById("heading").style.display = "";
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-          if (filter == 0) {
-            tr[i].style.display = "none";
-          }
-        }
+      <div class="input-div">
+        <div class="ac_container" id="div1">
+          <table id="myTable">
+            <thead><tr class="header" id="heading">
+              <th class="left">NAME</th>
+            </tr></thead><tbody>
+            {% for a in foodlist2 %}
+              <tr style="display: none;cursor: pointer;">
+                <td class="left" onclick="add_remove_item(this)">{{a|title}}</td>
+              </tr>
+            {% endfor %}</tbody>
+          </table>
+        </div>
+        <form>
+        <div class="ac_container" id="divtable">
+          <table id="myTable1">
+            <thead><tr class="header">
+              <th class="left">SELECTED ITEMS</th>
+              <th style="width:18%;" class="left">INTAKE</th>
+            </tr></thead>
+            <tbody>
+          </table>
+        </div></form>
+      </div>
+      <button type="submit" id="submit">Submit</button><br>
+    </div>
+  </form>
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    document.getElementById('heading').style.display = '';
+    for (i = 1; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }    }      
+      if (filter == 0) {
+        tr[i].style.display = "none";
+      } }}
+  var list = [];
+  var valList =[];
+  function add_remove_item(item){
+    if (list.includes(item.innerText.toLowerCase())){
+        item.style.backgroundColor = 'transparent';
+        item.parentNode.style.borderBottom = '0.00001rem solid grey';
+        var tr = document.getElementById(item.innerText.toLowerCase()).parentNode.parentNode;
+        tr.remove(); 
+        for (var i = 0; i <= list.length; i++) {
+          if (list[i]===item.innerText.toLowerCase()) {
+            list.splice(i,1);}      } }
+    else{
+      list.push(item.innerText.toLowerCase());
+      item.style.backgroundColor = 'grey';
+      item.parentNode.style.borderBottom = '0.00001rem solid black';
+      var val = list[list.length-1];
+      $("#myTable1").append("<tr>" +
+        "<td class='left'>"+val+"</td>" + 
+        `<td class='right'><input class='v' type='Number' placeholder='Grams' name='${val}' id='${val}' required /></td>` + 
+        "</tr>");}}
+  $("#submit").click(function() {
+    if ( $('form')[0].checkValidity() && list.length != '0') {
+      for (var i = 0; i < list.length; i++) {
+        var input = document.getElementById(list[i]).value;
+        valList.push(input);
       }
-    </script>
-  </body>
-</html>
+    $.ajax({
+        method: 'GET',
+        url: '/sendlist',
+        data: {'list': list.join("-js-"),'valList': valList.join("-js-")},
+    });
+  }
+  else{
+      alert("Please Select Foods and Fill Values");
+      return false;
+       }  });
+</script>
+{% endblock %}
