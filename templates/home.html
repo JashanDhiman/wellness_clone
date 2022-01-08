@@ -1,14 +1,33 @@
+{% extends 'navbar.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="{% static 'css/home.css' %}">
-	<title>Home Page</title>
-</head>
-<body>
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/home1.css' %}">
+{% endblock %}
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+
+{% block content %}
 	<div class="cards">
         <a href="body_output"><div class="card card1">
             <div class="container">
@@ -50,7 +69,7 @@
                 <h3>NATAL</h3>
             </div>
         </div>
-        <a href="more"><div class="card card3">
+        <a href="report"><div class="card card3">
             <div class="container">
                 <img src="static/images/photo.png" alt="Singapore">
             </div>
@@ -59,5 +78,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
