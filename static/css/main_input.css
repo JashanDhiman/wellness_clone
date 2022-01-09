@@ -1,29 +1,13 @@
-*,body{
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	color: #00FFFF;
-	font-family: "montserrat";
-}
-html{
-	scroll-behavior: smooth;
-}
 .container{
-height: 200vh;
-width: 100%;
-text-align: center;
-background: rgb(0,0,136);
-background: radial-gradient(circle, rgba(0,0,136,1) 0%, rgba(0,0,0,1) 100%);
+	height: 190vh;
+	width: 100%;
+	text-align: center;
+	font-size: clamp(0.1rem,3.5vw,1.2rem);
 } 
 .main{
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
 	display: flex;
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url("/static/images/firstpage.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .card{
 width: 95%;
@@ -32,27 +16,19 @@ height: fit-content;
 position: relative;
 margin: auto;
 padding: 15px 5px 20px 5px;
-background-color: #000000b8;
+background-color: #00000031;
 color: #00FFFF;
-font-size: 22px;
 border-radius: 50px;
-box-shadow: 0 0 30px #00FFFF;
+border: 2px solid cyan;
 }
 .card #img{
-	background-image: url("/static/images/icon.png");
-	width: 21px;
 	cursor: pointer;
-	height: 21px;
-	background-color: black;
-	display: inline-block;
-	background-size: cover;
-	position: relative;
+	color: lawngreen;
 }
 #tooltiptext {
   visibility: hidden;
-  width: 120px;
   background-color: black;
-  color: #fff;
+  color: lawngreen;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -61,15 +37,13 @@ box-shadow: 0 0 30px #00FFFF;
 }
 #femalediv {
   visibility: hidden;
-  color: #fff;
+  color: cyan;
 }
 #bottom{
-	color: red;
-	font-size: 18px;
+	color: lawngreen;
 }
 #bottom:hover{
-	color: yellow;
-	font-size: 20px;
+	color: cyan;
 }
 table {
   border-collapse: separate;
@@ -81,9 +55,9 @@ td{
 	width: 50%;
 }
 h2{
-font-size: 30px;
 font-weight: 600;
 padding-bottom:  30px;
+color: lawngreen;
 }
 .text{
 text-align: left;
@@ -94,21 +68,19 @@ margin: 0 20px;
 	background: none;
 	text-align: center;
 	border: 2px solid #00FFFF;
-	padding: 1px 5px;
-	width: 130px;
+	padding: 0.001rem 0;
+	width: clamp(2rem,10.5vw,6rem);
 	outline: none;
 	color: #00FFFF;
 	border-radius: 24px;
-	font-size: 15px;
 }
 #btn{
-	font-size: 25px;
-	font-family: inherit;
 	margin-top: 15px;
+    font-size: clamp(0.1rem,3.5vw,1.2rem);
 	border: none;
-	color: #00ffff;
+	color: lawngreen;
 	background-color: transparent;
-	border: 2px solid #00FFFF; 
+	border: 2px solid lawngreen; 
 	padding: 2px 20px;
 	border-radius: 30px;
 	outline: none;
@@ -116,7 +88,7 @@ margin: 0 20px;
 }
 #btn:hover{
 	color: black;
-	background-color: #00FFFF;
+	background-color: lawngreen;
 }
 #unit,#bodytype{
 	margin-right: 5px;
@@ -125,7 +97,6 @@ margin: 0 20px;
 	margin-bottom: 5px;
 }
 #cal{
-	height: fit-content;
 	width: 90%;
 	max-width: 30rem;
 	position: relative;
@@ -135,48 +106,49 @@ margin: 0 20px;
 }
 .converter-title{
 	text-align: center;
-	font-size: 30px;
 	padding: 0;
 }
 .height, .weight{
-	background-color: #000000b8;
+	background-color: #00000031;
 	height: 20%;
 	max-width: 30rem;
-	width: 90%;
+	width: 100%;
 	border-radius: 30px;
 	padding: 20px 10px;
+	border: 2px solid cyan;
 }
 #winput, #wresult, #hinput, #hresult{
 	border-radius: 20px;
 	background-color: transparent;
-	width: 35%;
+	width: clamp(70px,10.5vw,120px);
 	border: 2px solid #00FFFF;
 	color: cyan;
 	text-align: center;
 	outline: none;
+	font-size: clamp(0.8rem,3.5vw,1.2rem);
 }
 #winputType, #wresultType, #hinputType, #hresultType{
-	width: 35%;
 	color: cyan;
 	border: none;
 	background-color: transparent;
 	outline: none;
+	font-size: clamp(0.8rem,3.5vw,1.2rem);
 	border-bottom: 1px solid cyan;
-	font-size: 20px;
-}
-#wresultType,#hresultType{
-	margin-top: 20px; 
-	margin-left: 30px;
 }
 ::placeholder{
 	color: cyan;
 	opacity: 80%;
 }
-@media (max-width:600px) {
-	*{
-		font-size: 16px;
-	}
-	#winputType, #wresultType, #hinputType, #hresultType{
-		width: 35%;
-	}
+.full{
+	width: 95%;
+	margin: auto;
+}
+.full td{
+	width: auto;
+}
+.right{
+	text-align: right !important;
+}
+.left{
+	text-align: left !important;
 }
