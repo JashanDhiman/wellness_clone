@@ -1,92 +1,79 @@
-*{
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	color: #00FFFF;
-	font-family: "montserrat";
-}
-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-repeat: no-repeat;background: rgb(0,0,136);
-	background: radial-gradient(circle, rgba(0,0,136,1) 0%, rgba(0,0,0,1) 100%);
-	background-size: cover;
-	background-color: #112128;
-}
-li {
-    cursor: pointer;
-}
-p {
-    text-align: justify;
-    font-size: 25px;
-}
-text {
-    background-color: lightgrey;
-    color: black !important;
-}
-.container{
-	position: relative;
-	width: 100%;
-min-height: 100vh;
-text-align: center;
-display: flex;
+li,.close{cursor: pointer;}
+p{
+	text-align: justify;
 }
 .cards{
 	width: 100%;
 	text-align: center;
 	display: flex;
+	text-decoration: none;
 }
 .col{
 	min-height: 99vh;
-	width: 100%;
+	width: 100% ;
 	overflow: hidden;
-	border: 2px solid #00FFFF;
+	padding: 0 1rem;
+	border: 0.0001rem solid grey;
 }
 ol{
-	text-align: left;
-	width: fit-content;
-	margin: auto;
+	list-style-type: none;
+	color: lightgrey;
 }
 li{
 	margin-bottom: 15px;
-	font-size: 20px;
+	font-size: clamp(0.3rem, 3.5vw, 1.2rem);
 }
-h1{
+ol li a:hover{
+	border-bottom: 00.0001rem solid lightgrey;
+}
+.h2{
 	margin: 10px 0 20px 0;
+}
+.h2 a{
+	padding-bottom: 0.2rem;
+	color: lawngreen;
+	font-size: clamp(0.5rem, 5.5vw, 1.5rem);
+	border-bottom: 0.1rem solid lawngreen;
+	font-weight: 600;
+}
+#nakshtrdiv, #nakshtrdiv li{
+	text-align: right;
+}
+#rashidiv, #rashidiv li{
+	text-align: left;
 }
 .text{
 	display: none;
 	width: 90%;
+	min-height: 80vh;
 	overflow: hidden;
 	overflow-y: auto;
 	max-height: 90vh;
-	background-color: black;
-	color: cyan;
+	color: lightgrey;
 	position: absolute;
-	padding: 10px 30px 30px;
+	padding: 1rem;
 	margin: auto;
-	border: 2px solid #00FFFF;
+	border: 2px solid lawngreen;
+	border-radius: 20px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-}.text h2{
-	text-align: center;
 }
 .close {
   position: absolute;
   top: 10px;
-  right: 25px;
+  right: 1rem;
   transition: all 200ms;
-  font-size: 30px;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: lawngreen;
 }
 .close:hover {
-  color: #00FFFF;
+  color: cyan;
 }
-li,.close{cursor: pointer;}
-p{text-align: justify;font-size: 25px;}
-text{background-color: lightgrey;color: black !important;}
+@media (max-width: 768px){
+	.text{
+		width: 100%;
+	}
+}
