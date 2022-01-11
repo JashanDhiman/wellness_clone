@@ -6,8 +6,7 @@
 	width: 100%;
 	height: 100vh;
 	font-family: sans-serif;
-	background: rgb(0,0,136);
-	background: radial-gradient(circle, rgba(0,0,136,1) 0%, rgba(0,0,0,1) 100%);
+	background: #151320;
 }
 .box{
 	width: 70%;
@@ -17,15 +16,14 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	background: #000000b8;
 	text-align: center;
-	box-shadow: 0 0 20px #00FFFF;
 	border-radius: 20px;
-	border:3px solid #00FFFF;
+	border:2px solid cyan;
 }
-.box h1{
-	color: cyan;
-	text-transform: uppercase;
+.box nav a{
+	color: lawngreen;
+	font-size: clamp(1.2rem,3.5vw,1.8rem);
+	border-bottom: 0.1rem solid lawngreen;
 }
 .box input[type="username"],.box input[type="password"]{
 	border: 0;
@@ -33,83 +31,38 @@
 	display: block;
 	margin: 20px auto;
 	text-align: center;
-	border: 2px solid #00FFFF;
-	padding: 14px 10px;
+	border: 2px solid cyan;
+	padding: 0.5rem 0.3rem;
 	width: 200px;
 	outline: none;
-	color: white;
+	color: cyan;
 	border-radius: 24px;
 	transition: 0.25s;
 }
 .box input[type="username"]:focus,.box input[type="password"]:focus{
 	border-color: lawngreen;
-	width: 280px;
+	width: 100%;
 }
 .box input[type="submit"]{
-	border: 0;
 	background: none;
 	display: block;
 	margin: 10px auto;
 	text-align: center;
 	border: 2px solid lawngreen;
-	padding: 10px 30px;
+	padding: 0.1rem 1rem;
 	outline: none;
 	color: lawngreen;
-	border-radius: 24px;
-	transition: 0.25s;
+	border-radius: 20px;
+	transition: 0.3s;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: clamp(1rem,3.5vw,1.5rem);
 }
 .box input[type="submit"]:hover{
 	background: lawngreen;
 	color: black;
 }
-.box output{
-	border: 0;
-	background: none;
-	display: block;
-	margin: 20px auto;
-	text-align: center;
-	border: 2px solid #3498db;
-	padding: 14px 10px;
-	width: 200px;
-	outline: none;
-	color: white;
-	border-radius: 24px;
-	transition: 0.25s;
-	color: white;
-	max-width: 200px;
-	min-width: 199px;
-	max-height: 40px;
-	min-height: 39px;
-}
 label{
 	color: cyan;
-}
-#text{
-	display: none;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 90%;
-	max-height:90vh;
-	overflow-y: auto;
-	color: grey;
-	background: black;
-}
-.close {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  transition: all 200ms;
-  font-size: 40px;
-  font-weight: bold;
-  text-decoration: none;
-  color: cyan;
-}
-.close:hover {
-  color: lawngreen;
 }
 a{
 	text-decoration: none;
