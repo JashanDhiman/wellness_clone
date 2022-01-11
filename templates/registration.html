@@ -1,29 +1,48 @@
+{% extends 'navbar.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>login page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/registration.css' %}"
-    />
-  </head>
-  <body>
-    <form action="main_input" methods="POST">
-      <div class="container">
-        <div class="box">
-          <h1>Login</h1>
-          <input type="username" name="username" placeholder="username" />
-          <input type="password" name="password" placeholder="password" />
-          <a href="#">Forget Password?</a><br />
-          <input type="submit" name="submit" id="submit" />
-          <label>Not a member? <a href="signup">Sign-Up now</a></label>
-        </div>
-      </div>
-    </form>
-    <script></script>
-  </body>
-</html>
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/registration.css' %}">
+<style>
+	*{
+		box-sizing: border-box;
+	}
+</style>
+{% endblock %}
+{% block links %}
+<li class="nav-link">
+	<a href="#">Home</a>
+</li>
+<li class="nav-link">
+	<a href="#">Body</a>
+</li>
+<li class="nav-link">
+	<a href="#">Food</a>
+</li>
+<li class="nav-link">
+	<a href="#">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="#">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="#">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="#">Report</a>
+</li>
+{% endblock %}
+{% block content %}
+<form action="main_input" methods="POST">
+<div class="container">
+	<div class="box">
+		<nav><a>LOGIN</a></nav>
+		<input type="username" name="username" placeholder="username">
+		<input type="password" name="password" placeholder="password">
+		<a href="#">Forget Password?</a><br>	
+		
+		<input type="submit" name="submit" id="submit">
+		<label>Not a member? <a href="#">Sign-Up now</a></label>
+	</div>
+</div>
+</form>
+{% endblock %}
