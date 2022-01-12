@@ -5,8 +5,9 @@
 }
 .printcontainer{
     font-family: system-ui;
+    text-align: center;
     padding: 1%;
-    font-size: clamp(0.1rem,3.5vw,1.3rem) !important;
+    font-size: clamp(0.1rem,3.5vw,1.3rem);
 }
 .printbtncontainer, h2{
     text-align: center;
@@ -42,3 +43,8 @@ td{
     border: 0.1px solid grey;
     color: #C0C0C0;
 }
+h3{
+    color: lawngreen;
+    font-size: clamp(0.1rem,3.5vw,1rem);
+}
+@media print{    td,th,h2{        color: black;    }  }
