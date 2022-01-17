@@ -1,19 +1,79 @@
+{% extends 'navbar.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>yoga</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/yoga.css' %}" />
-</head>
-<body>
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+
+{% block stylesheet %}
+	<style type="text/css">
+		.blog{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: clamp(200px,100vw,400px);
+			text-align: center;
+		}
+		.blog label{
+			font-size: clamp(1.8rem, 5vw, 2.5rem); 
+			color: lawngreen;
+			border-bottom: 2px solid lawngreen;
+			font-weight: bold;
+		}
+		.blog .topics{
+			margin-top: 30px;
+			color: #00ff1f;
+			display: flex;
+			flex-direction: column;
+		}
+		.blog .topics .a{
+			width: fit-content;
+			text-align: center;
+			text-decoration: none;
+			cursor: pointer;
+			color: #2196f3;
+			font-size: clamp(1rem, 4vw, 1.5rem); 
+			padding: 2vh 0;
+			margin: auto;
+		}
+		.topics .a:hover{
+			color: lawngreen;
+		}
+		hr{
+			width: 4rem;
+			margin: auto;
+			border: none;
+			border-bottom: 1px solid lawngreen;
+		}
+	</style>
+{% endblock %}
+{% block content %}
 	<div class="blog">
-		<h2>YOGIC DETAILS</h2>
-	<a href="{% url 'disease' %}"><div class="desease"><p>DISEASE-WISE</p></div></a>
-	<a href="{% url 'yog_nidra' %}"><div class="meditation"><p>YOG-NIDRA</p></div></a>
-	<a href="{% url 'system_wise' %}"><div class="body"><p>SYSTEM-WISE</p></div></a>
-	<a href="{% url 'kriya' %}"><div class="asan"><p>ASAN, PRANAYAM & KRIYA</p></div></a>	
-	<a href="{% url 'upnishdic' %}"><div class="asan"><p>UPNISHDIC GEMS</p></div></a>	
+		<label>YOGIC DETAILS</label>
+		<div class="topics"><a class="a" href="disease">DISEASE-WISE</a><hr>
+		<a class="a" href="yog_nidra">YOG-NIDRA</a><hr>
+		<a class="a" href="system_wise">SYSTEM-WISE</a><hr>
+		<a class="a" href="kriya">ASAN, PRANAYAM & KRIYA</a><hr>
+		<a class="a" href="upnishdic">UPNISHDIC GEMS</a></div>	
 	</div>
-</body>
-</html>
+{% endblock %}
