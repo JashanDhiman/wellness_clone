@@ -1,52 +1,84 @@
+{% extends 'navbar.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>disease-wise</title>
-    <link rel="stylesheet" href="{% static 'css/disease2.css' %}">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .aud{
-            display: grid;
-            grid-template-columns: repeat(2,minmax(auto,250px));
-            padding: 20px;
-            grid-gap: 40px;
-            position: absolute;
-            width: fit-content;
-            height: 90vh;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            overflow-y: auto;
+
+{% block stylesheet %}
+<style>
+    .aud{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(auto,250px));
+        padding: 20px;
+        grid-gap: 40px;
+        position: absolute;
+        width: fit-content;
+        height: 90vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        overflow-y: auto;
+    }
+    @media only screen and (max-width: 600px) {
+        .aud {
+            grid-template-columns: repeat(1,minmax(auto,250px));
         }
-        @media only screen and (max-width: 600px) {
-            .aud {
-                grid-template-columns: repeat(1,minmax(auto,250px));
-            }
-            }
-        
-    </style>
-</head>
-<body>
+        }
+</style>
+{% endblock %}
+
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+
+{% block content %}
     <div class="aud">
     <audio controls controlsList="nodownload">
-        <source src="/static/yog nidra/jas.m4a" type="audio/mpeg">Your browser does not support the audio element.
+        <source src="/static/yog nidra/Brihad Yogic and Tantric Dhyan.m4a" type="audio/mpeg">Your browser does not support the audio element.
     </audio>
     <audio controls controlsList="nodownload">
-        <source src="/static/yog nidra/jas.m4a" type="audio/mpeg">Your browser does not support the audio element.
+        <source src="/static/yog nidra/Ice & Fire.m4a" type="audio/mpeg">Your browser does not support the audio element.
     </audio>
     <audio controls controlsList="nodownload">
-        <source src="/static/yog nidra/jas.m4a" type="audio/mpeg">Your browser does not support the audio element.
+        <source src="/static/yog nidra/Ida, Pingla & Sushumana.m4a" type="audio/mpeg">Your browser does not support the audio element.
     </audio>
     <audio controls controlsList="nodownload">
-        <source src="/static/yog nidra/jas.m4a" type="audio/mpeg">Your browser does not support the audio element.
+        <source src="/static/yog nidra/Internal Havan or Homa.m4a" type="audio/mpeg">Your browser does not support the audio element.
     </audio>
     <audio controls controlsList="nodownload">
-        <source src="/static/yog nidra/jas.m4a" type="audio/mpeg">Your browser does not support the audio element.
+        <source src="/static/yog nidra/Prelim Elemental Cleansing.m4a" type="audio/mpeg">Your browser does not support the audio element.
     </audio>
     <audio controls controlsList="nodownload">
-        <source src="/static/yog nidra/jas.m4a" type="audio/mpeg">Your browser does not support the audio element.
+        <source src="/static/yog nidra/Prelim-Relaxation-Addition.m4a" type="audio/mpeg">Your browser does not support the audio element.
+    </audio>
+    <audio controls controlsList="nodownload">
+        <source src="/static/yog nidra/Recording (autosaved).m4a" type="audio/mpeg">Your browser does not support the audio element.
+    </audio>
+    <audio controls controlsList="nodownload">
+        <source src="/static/yog nidra/Recreating New Body.m4a" type="audio/mpeg">Your browser does not support the audio element.
+    </audio>
+    <audio controls controlsList="nodownload">
+        <source src="/static/yog nidra/Sushumana Dhyan.m4a" type="audio/mpeg">Your browser does not support the audio element.
+    </audio>
+    <audio controls controlsList="nodownload">
+        <source src="/static/yog nidra/Ten Pran Experiencing.m4a" type="audio/mpeg">Your browser does not support the audio element.
     </audio>
     </div>
-</body>
-</html>
+{% endblock %}
