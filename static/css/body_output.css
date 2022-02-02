@@ -1,55 +1,30 @@
-*{
-	margin: 0;
-	padding: 0;
+a{
+  color: lawngreen;
 }
-body{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-	height: 100vh;
-	background: rgb(0,0,136);
-	background: radial-gradient(circle, rgba(0,0,136,1) 0%, rgba(0,0,0,1) 100%);
-	background-size: cover;
-}
-.div{
-	width: fit-content;
-	height: fit-content;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	border: 2px solid cyan;
-	transform: translate(-50%, -50%);
-	border-radius: 40px;
-	padding: 20px;
-	box-shadow: 1px 1px 40px #00FFFF;
-    background-color: #000000b8;
-}
-.div h1{
-    text-align: center; 
-    margin-bottom: 30px; 
-    color: lawngreen;
+.maindiv{
+width: fit-content;
+max-height: 85vh;
+position: absolute;
+top: 50%;
+left: 50%;
+border: 2px solid cyan;
+transform: translate(-50%, -50%);
+border-radius: 30px;
+padding: 10px;
 }
 table{
-  	border-collapse: collapse;
-  	color: #00FFFF;
-	font-size: 20px;
+  border-spacing: 1rem;
+  color: #00FFFF;
+font-size: clamp(0.3rem, 3.2vw, 1.3rem);
 }
 th{
-	text-align: left;
-	padding-top: 20px;
+text-align: left;
 }
 td{
-	text-align: left;
-	padding-left: 25px;
+text-align: left;
 }
-
-@media only screen and (max-width: 500px){
-	div{
-        border-radius: 0;
-    }
-}
-@media only screen and (max-width: 330px){
-	div{
-        top: 60%;			
-    }
+h1{
+  text-align: center; 
+  color: lawngreen;
+font-size: clamp(1rem, 4.2vw, 2rem);
 }
