@@ -1,154 +1,154 @@
 .container{
-	height: 190vh;
-	width: 100%;
-	text-align: center;
-	font-size: clamp(0.1rem,3.5vw,1.2rem);
-} 
-.main{
-	height: 90vh;
-	width: 100%;
-	display: flex;
-}
-.card{
-width: 95%;
-max-width: 30rem;
-height: fit-content;
-position: relative;
-margin: auto;
-padding: 15px 5px 20px 5px;
-background-color: #00000031;
-color: #00FFFF;
-border-radius: 50px;
-border: 2px solid cyan;
-}
-.card #img{
-	cursor: pointer;
-	color: lawngreen;
-}
-#tooltiptext {
-  visibility: hidden;
-  background-color: black;
-  color: lawngreen;
+  height: 190vh;
+  width: 100%;
   text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-}
-#femalediv {
-  visibility: hidden;
-  color: cyan;
-}
-#bottom{
-	color: lawngreen;
-}
-#bottom:hover{
-	color: cyan;
-}
-table {
-  border-collapse: separate;
-  border-spacing: 0 15px;
-}
-td{
-	margin: auto;
-	border: 2px solid transparent;
-	width: 50%;
-}
-h2{
-font-weight: 600;
-padding-bottom:  30px;
-color: lawngreen;
-}
-.text{
-text-align: left;
-margin: 0 20px;
-}
-#age,#weight,#height,#rhr{
-	border: 0;
-	background: none;
-	text-align: center;
-	border: 2px solid #00FFFF;
-	padding: 0.001rem 0;
-	width: clamp(2rem,10.5vw,6rem);
-	outline: none;
-	color: #00FFFF;
-	border-radius: 24px;
-}
-#btn{
-	margin-top: 15px;
-    font-size: clamp(0.1rem,3.5vw,1.2rem);
-	border: none;
-	color: lawngreen;
-	background-color: transparent;
-	border: 2px solid lawngreen; 
-	padding: 2px 20px;
-	border-radius: 30px;
-	outline: none;
-	cursor: pointer;
-}
-#btn:hover{
-	color: black;
-	background-color: lawngreen;
-}
-#unit,#bodytype{
-	margin-right: 5px;
-	margin-left: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-#cal{
-	width: 90%;
-	max-width: 30rem;
-	position: relative;
-	margin:auto;
-	align-items: center;
-	text-align: center;
-}
-.converter-title{
-	text-align: center;
-	padding: 0;
-}
-.height, .weight{
-	background-color: #00000031;
-	height: 20%;
-	max-width: 30rem;
-	width: 100%;
-	border-radius: 30px;
-	padding: 20px 10px;
-	border: 2px solid cyan;
-}
-#winput, #wresult, #hinput, #hresult{
-	border-radius: 20px;
-	background-color: transparent;
-	width: clamp(70px,10.5vw,120px);
-	border: 2px solid #00FFFF;
-	color: cyan;
-	text-align: center;
-	outline: none;
-	font-size: clamp(0.8rem,3.5vw,1.2rem);
-}
-#winputType, #wresultType, #hinputType, #hresultType{
-	color: cyan;
-	border: none;
-	background-color: transparent;
-	outline: none;
-	font-size: clamp(0.8rem,3.5vw,1.2rem);
-	border-bottom: 1px solid cyan;
-}
-::placeholder{
-	color: cyan;
-	opacity: 80%;
-}
-.full{
-	width: 95%;
-	margin: auto;
-}
-.full td{
-	width: auto;
-}
-.right{
-	text-align: right !important;
-}
-.left{
-	text-align: left !important;
-}
+  font-size: clamp(0.1rem,3.5vw,1.2rem);
+  } 
+  .main{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+  }
+  .card{
+  width: 95%;
+  max-width: 30rem;
+  height: fit-content;
+  position: relative;
+  margin: auto;
+  padding: 15px 5px 20px 5px;
+  background-color: #00000031;
+  color: #00FFFF;
+  border-radius: 50px;
+  border: 2px solid cyan;
+  }
+  .card #img{
+    cursor: pointer;
+    color: lawngreen;
+  }
+  #tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: lawngreen;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  #femalediv {
+    visibility: hidden;
+    color: cyan;
+  }
+  #bottom{
+    color: lawngreen;
+  }
+  #bottom:hover{
+    color: cyan;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
+  td{
+    margin: auto;
+    border: 2px solid transparent;
+    width: 50%;
+  }
+  h2{
+  font-weight: 600;
+  padding-bottom:  30px;
+  color: lawngreen;
+  }
+  .text{
+  text-align: left;
+  margin: 0 20px;
+  }
+  #age,#weight,#height,#rhr{
+    border: 0;
+    background: none;
+    text-align: center;
+    border: 2px solid #00FFFF;
+    padding: 0.001rem 0;
+    width: clamp(2rem,10.5vw,6rem);
+    outline: none;
+    color: #00FFFF;
+    border-radius: 24px;
+  }
+  #btn{
+    margin-top: 15px;
+      font-size: clamp(0.1rem,3.5vw,1.2rem);
+    border: none;
+    color: lawngreen;
+    background-color: transparent;
+    border: 2px solid lawngreen; 
+    padding: 2px 20px;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+  }
+  #btn:hover{
+    color: black;
+    background-color: lawngreen;
+  }
+  #unit,#bodytype{
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  #cal{
+    width: 90%;
+    max-width: 30rem;
+    position: relative;
+    margin:auto;
+    align-items: center;
+    text-align: center;
+  }
+  .converter-title{
+    text-align: center;
+    padding: 0;
+  }
+  .height, .weight{
+    background-color: #00000031;
+    height: 20%;
+    max-width: 30rem;
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px 10px;
+    border: 2px solid cyan;
+  }
+  #winput, #wresult, #hinput, #hresult{
+    border-radius: 20px;
+    background-color: transparent;
+    width: clamp(70px,10.5vw,120px);
+    border: 2px solid #00FFFF;
+    color: cyan;
+    text-align: center;
+    outline: none;
+    font-size: clamp(0.8rem,3.5vw,1.2rem);
+  }
+  #winputType, #wresultType, #hinputType, #hresultType{
+    color: cyan;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: clamp(0.8rem,3.5vw,1.2rem);
+    border-bottom: 1px solid cyan;
+  }
+  ::placeholder{
+    color: cyan;
+    opacity: 80%;
+  }
+  .full{
+    width: 95%;
+    margin: auto;
+  }
+  .full td{
+    width: auto;
+  }
+  .right{
+    text-align: right !important;
+  }
+  .left{
+    text-align: left !important;
+  }
