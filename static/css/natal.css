@@ -23,6 +23,9 @@ li{
 	margin-bottom: 15px;
 	font-size: clamp(0.3rem, 3.5vw, 1.2rem);
 }
+.col h1{
+  color: lawngreen;
+}
 ol li a:hover{
 	border-bottom: 00.0001rem solid lightgrey;
 }
