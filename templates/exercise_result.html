@@ -1,0 +1,57 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block stylesheet %}
+<link href="{% static 'css/exercise_output.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block links %}
+<li class="nav-link">
+	<a href="main_input">Home</a>
+</li>
+<li class="nav-link">
+	<a href="body_output">Body</a>
+</li>
+<li class="nav-link">
+	<a href="food">Food</a>
+</li>
+<li class="nav-link active">
+	<a href="exercise">Exercise</a>
+</li>
+<li class="nav-link">
+	<a href="yoga">Yoga</a>
+</li>
+<li class="nav-link">
+	<a href="natal">Natal</a>
+</li>
+<li class="nav-link">
+	<a href="report">Report</a>
+</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+            <div id="ex1"><h2>Activities</h2><br>
+        <table>
+            <tr>
+                <th>EXERCISES</th>
+                <th>CALORIES BURN</th>
+            </tr>
+            <tr>
+                {% for a,b in val.items %}
+                <tr><td>{{b}}</td><td>{{a|floatformat:1}} kcal</td></tr>
+                {% endfor %}
+            </tr>
+        </table></div><hr><div id="ex2"><table>
+            <h2>HIIT</h2><br>
+            <tr><td>HIIT </td><td> 3535{{hiit|floatformat:2}} kcal</td></tr>
+            <tr><td>Jog </td><td> 4445{{jog|floatformat:2}} kcal</td></tr>
+            <tr><td>Run </td><td> 5558{{run|floatformat:2}} kcal</td></tr>
+        </table></div><hr><div id="ex3">
+            <h2>GYM</h2><br>
+            <h3>Practice on following :-</h3>
+            <div id="gym1" style="display: none;"><h3>Leg-Press</h3><table id="legpress"></table><br><hr><br></div>
+            <div id="gym2" style="display: none;"><h3>Bench-Press</h3><table id="benchpress"></table><br><hr><br></div>
+            <div id="gym3" style="display: none;"><h3>Curling</h3><table id="curling"></table><br><hr><br></div></div>
+        <h2>Overall Calories Spent = {{total_cal|floatformat:2}}458 kcal</h2>
+    </div>
+{% endblock %}

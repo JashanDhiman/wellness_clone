@@ -15,7 +15,7 @@ def body_output(request):
 def exercise(request):
     return render(request, "exercise.html")
 def burn_output(request):
-    return render(request, "burn_output.html")
+    return render(request, "exercise_result.html")
 def food(request):
     return render(request, "food.html")
 def food_output(request):
